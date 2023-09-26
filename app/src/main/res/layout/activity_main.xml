@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/Presensi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Presensi"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/calenderCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/material_dynamic_neutral99"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Presensi">
+
+                <CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/shadow" />
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <Space
+                android:id="@+id/space"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/calenderCard"
+                app:layout_constraintStart_toStartOf="@+id/calenderCard"
+                app:layout_constraintTop_toBottomOf="@+id/calenderCard" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="230dp"
+                android:layout_height="140dp"
+                android:background="@drawable/shadow"
+                android:elevation="4dp"
+                android:timePickerMode="spinner"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/space" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/calenderCard"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/calenderCard"
+                app:layout_constraintTop_toBottomOf="@+id/timePicker" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="353dp"
+                android:layout_height="49dp"
+                android:background="@drawable/dropdown_spinner"
+                android:backgroundTint="#ededed"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="10dp"
+
+                app:layout_constraintEnd_toEndOf="@+id/calenderCard"
+                app:layout_constraintStart_toStartOf="@+id/calenderCard"
+                app:layout_constraintTop_toBottomOf="@+id/space2" />
+
+            <EditText
+                android:id="@+id/deskripsi"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/dropdown_spinner"
+                android:backgroundTint="#ededed"
+                android:hint="Keterangan"
+                android:padding="12dp"
+                android:paddingLeft="32dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_rounded_rectangle"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
